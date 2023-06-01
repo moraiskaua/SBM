@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     > div {
+        height: 100vh;
+        overflow-y: auto;
         width: 78%;
         background-color: whitesmoke;
         

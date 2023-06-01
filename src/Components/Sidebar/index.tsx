@@ -34,32 +34,42 @@ export const Sidebar = () => {
                 <ul>
                     <li>
                         <NavLink to="/">
-                            <span>Home</span>
-                            <HiOutlineHome />
+                            <div>
+                                <span>Home</span>
+                                <HiOutlineHome />
+                            </div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/orders">
-                            <span>Pedidos</span>
-                            <BiDrink />
+                            <div>
+                                <span>Pedidos</span>
+                                <BiDrink />
+                            </div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/stock">
-                            <span>Estoque</span>
-                            <VscGraph />
+                            <div>
+                                <span>Estoque</span>
+                                <VscGraph />
+                            </div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/suppliers">
-                            <span>Fornecedores</span>
-                            <RiTruckLine />
+                            <div>
+                                <span>Fornecedores</span>
+                                <RiTruckLine />
+                            </div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/cashier">
-                            <span>Caixa</span>
-                            <RiMoneyDollarCircleLine />
+                            <div>
+                                <span>Caixa</span>
+                                <RiMoneyDollarCircleLine />
+                            </div>
                         </NavLink>
                     </li>
                 </ul>

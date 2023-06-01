@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Sidebar } from "../../Components/Sidebar";
 import { Container } from "./styles";
 
-const Home = () => {
+const Main = () => {
     return (
         <Container>
             <Sidebar />
@@ -13,4 +13,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Main;
