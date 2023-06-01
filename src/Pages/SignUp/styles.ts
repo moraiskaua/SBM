@@ -1,55 +1,40 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type ImgProps = {
     imgUrl: string;
 }
 
-export const Container = styled.div`
+type LabelProps = {
+    smallLabel: boolean;
+}
+
+export const Container = styled.div<ImgProps>`
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: row;
-`;
-
-export const TopSide = styled.div`
-    padding-top: 2.8rem;
-`;
-
-export const LeftSide = styled.div<ImgProps>`
-    height: 100%;
-    flex: 2;
-    z-index: 2;
-    background-image: url(${(props) => props.imgUrl});
-    background-size: cover;
-    background-position: center;
-    box-shadow: rgba(0, 0, 0, .60) 35px 22px 70px 4px;
-    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-
-    @media (max-width: 430px) {
-        flex: 1;
-    }
-
-    @media (min-width: 431px) and (max-width: 890px) {
-        flex: 5;
-    }
+    background-image: url(${props => props.imgUrl});
+    background-position: center;
+    background-size: cover;
 `;
 
 export const LoginFormArea = styled.div`
     margin: auto;
+    height: 37.5rem;
+    width: 24rem;
+    background-color: #2C2013;
+    opacity: .90;
+    padding: 25px;
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 24rem;
-    background-color: #2C2013;
-    opacity: .87;
-    border-radius: 32px;
 
     button {
         margin: 10px 0px;
-        width: 80%;
+        width: 100%;
         padding: 15px;
         color: whitesmoke;
         border-radius: 8px;
@@ -65,31 +50,27 @@ export const LoginFormArea = styled.div`
         }
     }
 
-        a {
-            font-size: .8rem;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 200;
-            font-style: italic;
-            text-decoration: none;
-            color: #FF9824;
+    a {
+        font-size: .8rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        text-decoration: none;
+        text-align: center;
+        color: #FF9824;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
         }
+    }
 
     @media (max-width: 430px) {
         width: 95vw;
-    }
-
-    @media (min-width: 431px) and (max-width: 1300px) {
-        width: 90%;
     }
 `;
 
 export const LabelArea = styled.div`
     display: flex;
-    width: 80%;
     justify-content: start;
     color: white;
 
@@ -98,18 +79,37 @@ export const LabelArea = styled.div`
         font-family: 'Raleway', sans-serif;
         font-weight: bold;
         font-size: 25px;
-        margin-bottom: 10px;
+        margin: 20px 10px;
         opacity: 1;
     }
 `;
 
+export const Input = styled.input`
+    width: 100%;
+    color: whitesmoke;
+    text-align: start;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: whitesmoke;
+    }
+`;
+
 export const LabelBottomArea = styled.div`
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin-top: 15px;
+    margin-top: 1rem;
+    gap: 0rem .5rem;
 
     input {
         min-width: 1rem;
@@ -128,7 +128,6 @@ export const LabelBottomArea = styled.div`
         font-weight: 200;
         font-style: italic;
         color: whitesmoke;
-        margin-right: 2.8rem;
 
         &:hover {
             cursor: pointer;
@@ -151,17 +150,9 @@ export const LabelBottomArea = styled.div`
             text-decoration: underline;
         }
     }
-`;
 
-export const RightSide = styled.div<ImgProps>`
-    height: 100vh;
-    flex: 5;
-    z-index: 1;
-    background-image: url(${(props) => props.imgUrl});
-    background-position: center;
-    background-size: cover;
-
-    @media (max-width: 430px) {
-        flex: 0;
+    &:last-child {
+        justify-content: center;
+        gap: 0rem 1rem;
     }
 `;
