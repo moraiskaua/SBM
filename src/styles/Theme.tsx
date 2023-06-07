@@ -24,10 +24,10 @@ export const theme: DefaultTheme = {
     pink: '#FE5895',
     gray100: '#FAFAFA',
     gray200: '#E9ECEF',
-    gray300: '#DEE2E6',
+    gray300: '#D9D9D9',
     gray400: '#CED4DA',
     gray500: '#A4ACB4',
-    gray600: '#64666B',
+    gray600: '#545454',
     gray700: '#424449',
     gray800: '#1D1E21',
     gray900: '#141518',
@@ -36,7 +36,7 @@ export const theme: DefaultTheme = {
   },
   fontFamily: {
     heading: ['IBM Plex Sans', 'sans-serif'].join(','),
-    sans: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
+    sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'].join(','),
     mono: ['IBM Plex Mono', 'serif'].join(','),
   },
   fontSize: {

@@ -30,7 +30,7 @@ export default () => {
         <Container>
             <LeftSide imgUrl={innerWidth > 430 ? woodBg : mobileBg}>
                 <TopSide>
-                    <Logo />
+                    <Logo text={true}/>
                 </TopSide>
                 <LoginFormArea>
                     <LabelArea>

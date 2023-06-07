@@ -4,7 +4,7 @@ export const Container = styled.div`
     > div {
         height: 100vh;
         overflow-y: auto;
-        width: 78%;
+        width: 75%;
         background-color: whitesmoke;
         
             table {
@@ -38,6 +38,7 @@ export const Container = styled.div`
                         }
 
             &:first-child {
+                border-left: none;
                 width: 7rem;
             }
 
@@ -52,6 +53,7 @@ export const Container = styled.div`
             }
 
             &:last-child {
+                border-right: none;
                 width: 12rem;
             }
         }
